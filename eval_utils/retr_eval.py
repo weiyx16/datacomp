@@ -56,7 +56,9 @@ def evaluate_retrieval_dataset(
     metrics = zsr.evaluate(
         model, dataloader, tokenizer, recall_k_list=[1, 5, 10], device=device
     )
-    metrics["mean_recall@1"] = 0.5 * (
-        metrics["text_retrieval_recall@1"] + metrics["image_retrieval_recall@1"]
-    )
+    print(metrics)
+    metrics["mean_recall@1"] = metrics["image_retrieval_recall@1"]
+    # 0.5 * (
+    #     metrics["text_retrieval_recall@1"] + metrics["image_retrieval_recall@1"]
+    # )
     return metrics

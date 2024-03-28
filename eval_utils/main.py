@@ -1,14 +1,14 @@
 # Main branching point for evaluating on different datasets
 
-from .fairness_eval import (
-    evaluate_dollar_street_dataset,
-    evaluate_fairface_dataset,
-    evaluate_geode_dataset,
-)
+# from .fairness_eval import (
+#     evaluate_dollar_street_dataset,
+#     evaluate_fairface_dataset,
+#     evaluate_geode_dataset,
+# )
 from .retr_eval import evaluate_retrieval_dataset
-from .wds_eval import evaluate_webdataset
-from .wilds_eval import evaluate_wilds_dataset
-from .wino_eval import evaluate_winogavil_dataset
+# from .wds_eval import evaluate_webdataset
+# from .wilds_eval import evaluate_wilds_dataset
+# from .wino_eval import evaluate_winogavil_dataset
 
 
 def evaluate_model(task_key, train_info, data_root, dataset_size, batch_size=64):
